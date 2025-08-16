@@ -26,8 +26,8 @@ The setup covers:
 
 ### 1. Create a Resource Group in Azure
 
-![steps](steps/stepa.png)
-![steps](steps/stepb.png)
+![steps](Steps/stepa.png)
+![steps](Steps/stepb.png)
 
 A resource group logically groups all Azure resources for easier management and organization.
 
@@ -35,7 +35,7 @@ A resource group logically groups all Azure resources for easier management and 
 
 ### 2. Create a Storage Account
 
-![steps](steps/stepc.png)
+![steps](Steps/stepc.png)
 
 This storage account will be used to host the static site.
 
@@ -43,7 +43,7 @@ This storage account will be used to host the static site.
 
 ### 3. Enable Static Website for the Storage Account
 
-![steps](steps/stepd.png)
+![steps](Steps/stepd.png)
 
 * Enable **Static Website Hosting** in the storage account.
 * This automatically creates a `$web` container where your website files will be stored.
@@ -53,7 +53,7 @@ This storage account will be used to host the static site.
 
 ### 4. Upload Content in `$web` Container
 
-![steps](steps/stepe.png)
+![steps](Steps/stepe.png)
 
 Upload your static files (HTML, CSS, JS, images) into the `$web` container.
 
@@ -61,8 +61,8 @@ Upload your static files (HTML, CSS, JS, images) into the `$web` container.
 
 ### 5. Enable Anonymous Access
 
-![steps](steps/stepf.png)
-![steps](steps/stepg.png)
+![steps](Steps/stepf.png)
+![steps](Steps/stepg.png)
 
 * Configure storage account access to allow **public anonymous read access** for blobs.
 * This ensures website visitors can fetch your static files directly without authentication.
@@ -71,7 +71,7 @@ Upload your static files (HTML, CSS, JS, images) into the `$web` container.
 
 ### 6. Create a CDN Profile and Endpoint
 
-![steps](steps/steph.png)
+![steps](Steps/steph.png)
 
 * Create an **Azure CDN Profile**.
 * Add a **CDN Endpoint** pointing to your `$web` container in Blob Storage.
@@ -79,7 +79,7 @@ Upload your static files (HTML, CSS, JS, images) into the `$web` container.
 
 #### Access using CDN domain
 
-![steps](steps/stepi.png)
+![steps](Steps/stepi.png)
 
 At this stage, your website is accessible via the **CDN endpoint domain** provided by Azure.
 
@@ -87,15 +87,15 @@ At this stage, your website is accessible via the **CDN endpoint domain** provid
 
 ### 7. Create DNS Zone and Record Set
 
-![steps](steps/stepja.png)
+![steps](Steps/stepja.png)
 
 * Set up a **DNS Zone** in Azure to manage your domain.
 * Ensure your **domain registrar is pointing to Azure nameservers**.
 
 #### Create record set with CDN endpoint as CNAME
 
-![steps](steps/stepj.png)
-![steps](steps/stepk.png)
+![steps](Steps/stepj.png)
+![steps](Steps/stepk.png)
 
 Add a **CNAME record** that maps your custom domain (e.g., `www.example.com`) to the Azure CDN endpoint.
 
@@ -103,14 +103,14 @@ Add a **CNAME record** that maps your custom domain (e.g., `www.example.com`) to
 
 ### 8. Add Custom Domain to CDN
 
-![steps](steps/stepl.png)
+![steps](Steps/stepl.png)
 
 * Link your custom domain with the Azure CDN endpoint.
 
 #### Add HTTPS to custom domain
 
-![steps](steps/stepm.png)
-![steps](steps/stepn.png)
+![steps](Steps/stepm.png)
+![steps](Steps/stepn.png)
 
 * Enable **HTTPS** using Azure-managed certificates for secure browsing.
 
@@ -118,7 +118,7 @@ Add a **CNAME record** that maps your custom domain (e.g., `www.example.com`) to
 
 ### 9. Verify Website Using Custom Domain
 
-![steps](steps/stepo.png)
+![steps](Steps/stepo.png)
 
 Finally, visit your website using your **custom domain**. Verify that:
 
