@@ -94,8 +94,8 @@ At this stage, your website is accessible via the **CDN endpoint domain** provid
 
 #### Create record set with CDN endpoint as CNAME
 
-![steps](Steps/stepj.png)
 ![steps](Steps/stepk.png)
+![steps](Steps/stepj.png)
 
 Add a **CNAME record** that maps your custom domain (e.g., `www.example.com`) to the Azure CDN endpoint.
 
